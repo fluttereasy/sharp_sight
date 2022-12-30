@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sharp_sight/Homescreen/home_screen.dart';
+import 'package:sharp_sight/Screens/dash_board_screen.dart';
 import 'package:sharp_sight/Screens/login_screen.dart';
 import 'package:sharp_sight/Screens/otp_verification_screen.dart';
 import 'package:sharp_sight/cubit/auth_cubit/auth_cubit.dart';
@@ -28,7 +29,7 @@ class _OtpScreenState extends State<OtpScreen> {
                 Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const HomeScreen()));
+                        builder: (context) => const DashBoard()));
               },
               style: ElevatedButton.styleFrom(
                   fixedSize: const Size(100, 40),

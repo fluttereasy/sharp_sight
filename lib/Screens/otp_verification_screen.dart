@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pinput/pinput.dart';
 import 'package:sharp_sight/Homescreen/home_screen.dart';
+import 'package:sharp_sight/Screens/dash_board_screen.dart';
 import 'package:sharp_sight/cubit/auth_cubit/auth_cubit.dart';
 import 'package:sharp_sight/cubit/auth_cubit/auth_states.dart';
 
@@ -79,7 +80,7 @@ class _OtpVerifyScreenState extends State<OtpVerifyScreen> {
                   Navigator.pushReplacement(
                       context,
                       CupertinoPageRoute(
-                          builder: (context) => const HomeScreen()));
+                          builder: (context) => const DashBoard()));
                 } else if (state is AuthErrorState) {
                   ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                     backgroundColor: Colors.red,
