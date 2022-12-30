@@ -32,6 +32,7 @@ class _OtpVerifyScreenState extends State<OtpVerifyScreen> {
         backgroundColor: const Color(0xff7850a8),
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Padding(
               padding: EdgeInsets.fromLTRB(20, 10, 0, 0),
