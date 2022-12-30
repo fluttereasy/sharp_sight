@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "885770405986",
+    "project_id": "sharpsightapp",
+    "storage_bucket": "sharpsightapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:885770405986:android:8a94fe66775788d665693b",
+        "android_client_info": {
+          "package_name": "com.example.sharp_sight"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "885770405986-2nbkosrk8fkcnpva9a0p0sb39cs43612.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sharp_sight",
+            "certificate_hash": "753027ebbcf68139e25a9932e4e6ce5aabad1722"
+          }
+        },
+        {
+          "client_id": "885770405986-pi51l1f0uahl2tndhb89tpe7gmd8a412.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkdStMvgBEMJp-bJtDQ5h2SILKRSPz1hk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "885770405986-pi51l1f0uahl2tndhb89tpe7gmd8a412.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
