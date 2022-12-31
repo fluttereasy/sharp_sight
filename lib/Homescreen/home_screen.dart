@@ -177,7 +177,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   height: MediaQuery.of(context).size.height,
                   width: double.infinity,
                   color: Colors.white,
-                  child: Text(
+                  child: const Text(
                     'Your practice is great.\n The services you provide are incredible and the patient experience you provide is like nothing else. You know these to be true, but are they known locally, nationally, or globally?Sure, your regulars spread the word about your practice to their social circles.\n But can you provide any evidence about how great your practice is outside of what you and your brand ambassadors say?That’s where patient testimonials come in. They’re proof to prospective clients that you’re as amazing as everyone says while keeping your regulars at ease.',
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                   ),

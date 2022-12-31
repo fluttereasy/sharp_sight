@@ -1,28 +1,21 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:sharp_sight/Screens/dash_screen.dart';
 import 'package:sharp_sight/Screens/profile_screen.dart';
-
 import '../Homescreen/home_screen.dart';
-import '../cubit/auth_cubit/auth_cubit.dart';
-import '../cubit/auth_cubit/auth_states.dart';
-import 'otp_screen.dart';
-class DashBoard extends StatefulWidget {
-  const DashBoard({Key? key}) : super(key: key);
+
+class NavigationBarScreen extends StatefulWidget {
+  const NavigationBarScreen({Key? key}) : super(key: key);
 
   @override
-  State<DashBoard> createState() => _DashBoardState();
+  State<NavigationBarScreen> createState() => _NavigationBarScreenState();
 }
 
-class _DashBoardState extends State<DashBoard> {
-
+class _NavigationBarScreenState extends State<NavigationBarScreen> {
   int currentIndex = 0;
   final screens = [
     const HomeScreen(),
     const DashScreen(),
-    const Profilescreen()
+    const Profilescreen(),
   ];
 
   @override
@@ -36,7 +29,7 @@ class _DashBoardState extends State<DashBoard> {
         selectedItemColor: Colors.purple,
         showUnselectedLabels: false,
         currentIndex: currentIndex,
-        onTap: (index)=>setState(()=>currentIndex=index),
+        onTap: (index) => setState(() => currentIndex = index),
         items: const [
           BottomNavigationBarItem(
               label: 'Home',
