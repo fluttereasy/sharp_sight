@@ -115,6 +115,11 @@ class _OtpScreenState extends State<OtpScreen> {
                                 elevation: 20,
                                 child: ElevatedButton(
                                     onPressed: () {
+                                      if(state is AuthLoadingState){
+                                        const Center(
+                                          child: CircularProgressIndicator(),
+                                        );
+                                      }
                                       String phoneNumber =
                                           "+91${_mobileNumberController.text}";
                                       BlocProvider.of<AuthCubit>(context)
@@ -133,11 +138,7 @@ class _OtpScreenState extends State<OtpScreen> {
                       ),
                       TextButton(
                           onPressed: () {
-                            Navigator.pushReplacement(
-                                context,
-                                CupertinoPageRoute(
-                                    builder: (BuildContext context) =>
-                                        const LoginScreen()));
+                           Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginScreen()));
                           },
                           child: const Text(
                             'Already have an account? Login here',

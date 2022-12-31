@@ -28,7 +28,7 @@ class _DashScreenState extends State<DashScreen> {
                   decoration: BoxDecoration(
                       image: const DecorationImage(
                           image: NetworkImage(
-                              'https://th.bing.com/th/id/OIP.sIks3mQCWGAoxTV-gS3rpAAAAA?pid=ImgDet&rs=1')),
+                              'https://t3.ftcdn.net/jpg/01/38/42/24/500_F_138422416_VyRbaYCT43pLqXlZdWthpt70iTfTdU8z.jpg')),
                       borderRadius: BorderRadius.circular(10),
                       color: Colors.white),
                   child: const Padding(

@@ -46,10 +46,13 @@ class _HomeScreenState extends State<HomeScreen> {
                     color: Colors.grey,
                     child: const Align(
                       alignment: Alignment.centerLeft,
-                      child: Text(
-                        'Our Services',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 17),
+                      child: Padding(
+                        padding: EdgeInsets.fromLTRB(5, 0, 0, 0),
+                        child: Text(
+                          'Our Services',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 17),
+                        ),
                       ),
                     )),
                 const SizedBox(height: 20),
@@ -165,12 +168,15 @@ class _HomeScreenState extends State<HomeScreen> {
                     height: 30,
                     width: double.infinity,
                     color: Colors.grey,
-                    child: const Align(
-                      alignment: Alignment.centerLeft,
-                      child: Text(
-                        'Testimonials',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 17),
+                    child: const Padding(
+                      padding: EdgeInsets.fromLTRB(5, 0, 0, 0),
+                      child: Align(
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          'Testimonials',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 17),
+                        ),
                       ),
                     )),
                 Container(

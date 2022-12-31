@@ -22,24 +22,32 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
 
   @override
   Widget build(BuildContext context) {
-
-    if(currentIndex==3){
+    if (currentIndex == 3) {
       return Scaffold(
         body: Center(
           child: AlertDialog(
-            content: const Text('Are you sure you want to exitr?'),
+            content: const Text('Are you sure you want to exit?'),
             actions: [
               TextButton(
                 onPressed: () {
                   SystemNavigator.pop();
                 },
-                child: const Text('YES', style: TextStyle(color: Colors.black),),
+                child: const Text(
+                  'YES',
+                  style: TextStyle(color: Colors.black),
+                ),
               ),
               TextButton(
                 onPressed: () {
-                  Navigator.pushReplacement(context, CupertinoPageRoute(builder: (context)=>const NavigationBarScreen()));
+                  Navigator.pushReplacement(
+                      context,
+                      CupertinoPageRoute(
+                          builder: (context) => const NavigationBarScreen()));
                 },
-                child: const Text('NO', style: TextStyle(color: Colors.black),),
+                child: const Text(
+                  'NO',
+                  style: TextStyle(color: Colors.black),
+                ),
               ),
             ],
           ),
