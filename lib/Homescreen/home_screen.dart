@@ -30,8 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           color: Colors.purpleAccent,
                           image: const DecorationImage(
                               fit: BoxFit.fill,
-                              image: NetworkImage(
-                                  'https://static.vecteezy.com/system/resources/previews/000/580/411/original/hospital-logo-and-symbols-template-icons-vector.jpg')),
+                              image: AssetImage('assets/hospitallogo.jpg')),
                           borderRadius: BorderRadius.circular(20)),
                     );
                   }),
