@@ -10,9 +10,7 @@ class AppointmentBar extends StatefulWidget {
 class _AppointmentBarState extends State<AppointmentBar> {
   @override
   Widget build(BuildContext context) {
-    void updateList(String value){
-      
-    }
+    void updateList(String value){}
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
