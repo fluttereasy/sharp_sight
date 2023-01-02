@@ -1,10 +1,11 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:sharp_sight/Homescreen/home_screen.dart';
 import 'package:sharp_sight/Screens/otp_screen.dart';
 import 'package:sharp_sight/cubit/auth_cubit/auth_cubit.dart';
 import 'package:sharp_sight/cubit/auth_cubit/auth_states.dart';
+
+import 'Screens/navigation_bar_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -37,7 +38,7 @@ class _MyAppState extends State<MyApp> {
           },
           builder: (context, state) {
             if (state is AuthLoggedInState) {
-              return const HomeScreen();
+              return const NavigationBarScreen();
             } else if (state is AuthLoggedOutState) {
               return const OtpScreen();
             } else {

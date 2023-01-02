@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:sharp_sight/Appointment/appointment.dart';
 
 class DashScreen extends StatefulWidget {
   const DashScreen({Key? key}) : super(key: key);
@@ -12,7 +14,7 @@ class _DashScreenState extends State<DashScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-          backgroundColor: Colors.purple,
+          backgroundColor: Color(0xffAE98D7),
           body: GridView(
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
@@ -23,6 +25,7 @@ class _DashScreenState extends State<DashScreen> {
               children: [
                 InkWell(
                   onTap: () {
+                    Navigator.push(context, CupertinoPageRoute(builder: (context)=>const AppointmentBar()));
                   },
                   child: Container(
                     height: 100,
@@ -35,7 +38,7 @@ class _DashScreenState extends State<DashScreen> {
                         borderRadius: BorderRadius.circular(10),
                         color: Colors.white),
                     child: Padding(
-                      padding: const EdgeInsets.fromLTRB(8, 140, 8, 6),
+                      padding: const EdgeInsets.fromLTRB(8, 128, 8, 6),
                       child: Container(
                         width: double.infinity,
                         decoration: BoxDecoration(
@@ -65,7 +68,7 @@ class _DashScreenState extends State<DashScreen> {
                       borderRadius: BorderRadius.circular(10),
                       color: Colors.white),
                   child: Padding(
-                    padding: const EdgeInsets.fromLTRB(8, 140, 8, 6),
+                    padding: const EdgeInsets.fromLTRB(8, 128, 8, 6),
                     child: Container(
                       width: double.infinity,
                       decoration: BoxDecoration(
@@ -94,7 +97,7 @@ class _DashScreenState extends State<DashScreen> {
                       borderRadius: BorderRadius.circular(10),
                       color: Colors.white),
                   child: Padding(
-                    padding: const EdgeInsets.fromLTRB(8, 140, 8, 6),
+                    padding: const EdgeInsets.fromLTRB(8, 128, 8, 6),
                     child: Container(
                       width: double.infinity,
                       decoration: BoxDecoration(
@@ -103,7 +106,7 @@ class _DashScreenState extends State<DashScreen> {
                       child: const Align(
                         alignment: Alignment.bottomCenter,
                         child: Text(
-                          'Surgery',
+                          'Assistant',
                           style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 15,
@@ -123,7 +126,7 @@ class _DashScreenState extends State<DashScreen> {
                       borderRadius: BorderRadius.circular(10),
                       color: Colors.white),
                   child: Padding(
-                    padding: const EdgeInsets.fromLTRB(8, 140, 8, 6),
+                    padding: const EdgeInsets.fromLTRB(8, 128, 8, 6),
                     child: Container(
                       width: double.infinity,
                       decoration: BoxDecoration(
@@ -132,7 +135,7 @@ class _DashScreenState extends State<DashScreen> {
                       child: const Align(
                         alignment: Alignment.bottomCenter,
                         child: Text(
-                          'Quick Appointment',
+                          'Appoint Call',
                           style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 10,
@@ -152,7 +155,7 @@ class _DashScreenState extends State<DashScreen> {
                       borderRadius: BorderRadius.circular(10),
                       color: Colors.white),
                   child: Padding(
-                    padding: const EdgeInsets.fromLTRB(8, 140, 8, 6),
+                    padding: const EdgeInsets.fromLTRB(8, 128, 8, 6),
                     child: Container(
                       width: double.infinity,
                       decoration: BoxDecoration(
@@ -161,7 +164,7 @@ class _DashScreenState extends State<DashScreen> {
                       child: const Align(
                         alignment: Alignment.bottomCenter,
                         child: Text(
-                          'Youtube Feeds',
+                          'Youtube Feed',
                           style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 15,
@@ -181,7 +184,7 @@ class _DashScreenState extends State<DashScreen> {
                       borderRadius: BorderRadius.circular(10),
                       color: Colors.white),
                   child: Padding(
-                    padding: const EdgeInsets.fromLTRB(8, 140, 8, 6),
+                    padding: const EdgeInsets.fromLTRB(8, 128, 8, 6),
                     child: Container(
                       width: double.infinity,
                       decoration: BoxDecoration(
@@ -211,7 +214,7 @@ class _DashScreenState extends State<DashScreen> {
                       borderRadius: BorderRadius.circular(10),
                       color: Colors.white),
                   child: Padding(
-                    padding: const EdgeInsets.fromLTRB(8, 140, 8, 6),
+                    padding: const EdgeInsets.fromLTRB(8, 128, 8, 6),
                     child: Container(
                       width: double.infinity,
                       decoration: BoxDecoration(
@@ -240,7 +243,7 @@ class _DashScreenState extends State<DashScreen> {
                       borderRadius: BorderRadius.circular(10),
                       color: Colors.white),
                   child: Padding(
-                    padding: const EdgeInsets.fromLTRB(8, 140, 8, 6),
+                    padding: const EdgeInsets.fromLTRB(8, 128, 8, 6),
                     child: Container(
                       width: double.infinity,
                       decoration: BoxDecoration(
@@ -263,30 +266,3 @@ class _DashScreenState extends State<DashScreen> {
     );
   }
 }
-
-// GridView.count(
-//         crossAxisCount: 2,
-//         crossAxisSpacing: 10.0,
-//         mainAxisSpacing: 10.0,
-//         shrinkWrap: true,
-//         children: List.generate(
-//           20,
-//           (index) {
-//             return Padding(
-//               padding: const EdgeInsets.all(10.0),
-//               child: Container(
-//                 decoration: const BoxDecoration(
-//                   color: Colors.white,
-//                   image: DecorationImage(
-//                     image: NetworkImage('img.png'),
-//                     fit: BoxFit.cover,
-//                   ),
-//                   borderRadius: BorderRadius.all(
-//                     Radius.circular(20.0),
-//                   ),
-//                 ),
-//               ),
-//             );
-//           },
-//         ),
-//       ),

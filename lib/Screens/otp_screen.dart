@@ -27,7 +27,7 @@ class _OtpScreenState extends State<OtpScreen> {
               onPressed: () {
                 Navigator.pushReplacement(
                     context,
-                    MaterialPageRoute(
+                    CupertinoPageRoute(
                         builder: (context) => const NavigationBarScreen()));
               },
               style: ElevatedButton.styleFrom(
@@ -155,8 +155,8 @@ class _OtpScreenState extends State<OtpScreen> {
                           onPressed: () {
                             Navigator.push(
                                 context,
-                                MaterialPageRoute(
-                                    builder: (context) => LoginScreen()));
+                                CupertinoPageRoute(
+                                    builder: (context) => const LoginScreen()));
                           },
                           child: const Text(
                             'Already have an account? Login here',

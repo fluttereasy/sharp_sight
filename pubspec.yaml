@@ -41,6 +41,7 @@ dependencies:
   firebase_core: ^2.4.0
   firebase_auth: ^4.2.3
   flutter_bloc: ^8.1.1
+  flutter_typeahead:
 
 dev_dependencies:
   flutter_test:

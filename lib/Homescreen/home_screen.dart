@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:sharp_sight/Our_Services/cataract.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -12,6 +14,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        backgroundColor: const Color(0xffAE98D7),
         body: SingleChildScrollView(
             child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -50,7 +53,9 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: Text(
                           'Our Services',
                           style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 17),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 17,
+                              color: Colors.black),
                         ),
                       ),
                     )),
@@ -59,27 +64,31 @@ class _HomeScreenState extends State<HomeScreen> {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      Container(
-                        margin: const EdgeInsets.all(8),
-                        height: 100,
-                        width: 100,
-                        decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: NetworkImage(
-                                    'https://www.verywellhealth.com/thmb/V8389WqQOWu3eq0PvPXMsqrD2gU=/1889x1587/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-548300195-59a350e90d327a00103d7c72.jpg'))),
-                        child: Align(
-                          alignment: Alignment.bottomCenter,
-                          child: Padding(
-                            padding: const EdgeInsets.fromLTRB(10, 20, 5, 5),
-                            child: Container(
-                              height: 20,
-                              width: 100,
-                              color: Colors.white,
-                              child: const Center(
-                                  child: Text(
-                                'Cataract',
-                                style: TextStyle(fontSize: 16),
-                              )),
+                      GestureDetector(
+                        onTap: (){Navigator.push(context, CupertinoPageRoute(builder: (context)=>const CataractInfo()));},
+                        child: Container(
+                          margin: const EdgeInsets.all(8),
+                          height: 100,
+                          width: 100,
+                          decoration: const BoxDecoration(
+                              image: DecorationImage(
+                                  image: NetworkImage(
+                                      'https://www.verywellhealth.com/thmb/V8389WqQOWu3eq0PvPXMsqrD2gU=/1889x1587/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-548300195-59a350e90d327a00103d7c72.jpg'))),
+                          child: Align(
+                            alignment: Alignment.bottomCenter,
+                            child: Padding(
+                              padding: const EdgeInsets.fromLTRB(10, 20, 5, 5),
+                              child: Container(
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(10)),
+                                height: 20,
+                                width: 100,
+                                child: const Center(
+                                    child: Text(
+                                  'Cataract',
+                                  style: TextStyle(fontSize: 16),
+                                )),
+                              ),
                             ),
                           ),
                         ),
@@ -103,7 +112,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               child: const Center(
                                   child: Text(
                                 'Lasik',
-                                style: TextStyle(fontSize: 16),
+                                style: TextStyle(letterSpacing: 2,fontSize: 16),
                               )),
                             ),
                           ),
@@ -174,14 +183,16 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: Text(
                           'Testimonials',
                           style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 17),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 17,
+                              color: Colors.black),
                         ),
                       ),
                     )),
                 Container(
                   height: MediaQuery.of(context).size.height,
                   width: double.infinity,
-                  color: Colors.white,
+                  color: Color(0xffAE98D7),
                   child: const Text(
                     'Your practice is great.\n The services you provide are incredible and the patient experience you provide is like nothing else. You know these to be true, but are they known locally, nationally, or globally?Sure, your regulars spread the word about your practice to their social circles.\n But can you provide any evidence about how great your practice is outside of what you and your brand ambassadors say?That’s where patient testimonials come in. They’re proof to prospective clients that you’re as amazing as everyone says while keeping your regulars at ease.',
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),

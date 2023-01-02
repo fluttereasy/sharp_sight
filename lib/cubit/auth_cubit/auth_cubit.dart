@@ -43,6 +43,7 @@ class AuthCubit extends Cubit<AuthState> {
   }
 
   void signInWithPhone(PhoneAuthCredential credential) async {
+    emit(AuthLoadingState());
     try {
       UserCredential userCredential =
           await _auth.signInWithCredential(credential);
