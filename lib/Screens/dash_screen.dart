@@ -21,24 +21,38 @@ class _DashScreenState extends State<DashScreen> {
               primary: false,
               padding: const EdgeInsets.all(20),
               children: [
-                Container(
-                  height: 100,
-                  width: 100,
-                  margin: const EdgeInsets.all(8),
-                  decoration: BoxDecoration(
-                      image: const DecorationImage(
-                          image: NetworkImage(
-                              'https://t3.ftcdn.net/jpg/01/38/42/24/500_F_138422416_VyRbaYCT43pLqXlZdWthpt70iTfTdU8z.jpg')),
-                      borderRadius: BorderRadius.circular(10),
-                      color: Colors.white),
-                  child: const Padding(
-                    padding: EdgeInsets.all(8.0),
-                    child: Align(
-                        alignment: Alignment.bottomCenter,
-                        child: Text(
-                          'Appointment',
-                          style: TextStyle(fontWeight: FontWeight.bold),
-                        )),
+                InkWell(
+                  onTap: () {
+                  },
+                  child: Container(
+                    height: 100,
+                    width: 100,
+                    margin: const EdgeInsets.all(8),
+                    decoration: BoxDecoration(
+                        image: const DecorationImage(
+                          image: AssetImage('assets/appointment.jpg'),
+                        ),
+                        borderRadius: BorderRadius.circular(10),
+                        color: Colors.white),
+                    child: Padding(
+                      padding: const EdgeInsets.fromLTRB(8, 140, 8, 6),
+                      child: Container(
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: Colors.grey),
+                        child: const Align(
+                          alignment: Alignment.bottomCenter,
+                          child: Text(
+                            'Appointment',
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 15,
+                                letterSpacing: 3),
+                          ),
+                        ),
+                      ),
+                    ),
                   ),
                 ),
                 Container(
@@ -47,18 +61,27 @@ class _DashScreenState extends State<DashScreen> {
                   margin: const EdgeInsets.all(8),
                   decoration: BoxDecoration(
                       image: const DecorationImage(
-                          image: NetworkImage(
-                              'https://image.freepik.com/free-icon/video-call_318-1336.jpg')),
+                          image: AssetImage('assets/videocall.jpg')),
                       borderRadius: BorderRadius.circular(10),
                       color: Colors.white),
-                  child: const Padding(
-                    padding: EdgeInsets.all(8.0),
-                    child: Align(
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(8, 140, 8, 6),
+                    child: Container(
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.grey),
+                      child: const Align(
                         alignment: Alignment.bottomCenter,
                         child: Text(
-                          'Video Call',
-                          style: TextStyle(fontWeight: FontWeight.bold),
-                        )),
+                          'Arrange Call',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 15,
+                              letterSpacing: 3),
+                        ),
+                      ),
+                    ),
                   ),
                 ),
                 Container(
@@ -67,18 +90,27 @@ class _DashScreenState extends State<DashScreen> {
                   margin: const EdgeInsets.all(8),
                   decoration: BoxDecoration(
                       image: const DecorationImage(
-                          image: NetworkImage(
-                              'https://media.istockphoto.com/vectors/eyelid-surgery-procedure-before-the-main-steps-excess-skin-and-fat-vector-id1047225272?k=6&m=1047225272&s=612x612&w=0&h=6pva49TOM9Q4XAKp3PER5kwzT5_OQp0umiwHZ9pDYv0=')),
+                          image: AssetImage('assets/eyesurgery.jpg')),
                       borderRadius: BorderRadius.circular(10),
                       color: Colors.white),
-                  child: const Padding(
-                    padding: EdgeInsets.all(8.0),
-                    child: Align(
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(8, 140, 8, 6),
+                    child: Container(
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.grey),
+                      child: const Align(
                         alignment: Alignment.bottomCenter,
                         child: Text(
-                          'Eye Surgery Assistant',
-                          style: TextStyle(fontWeight: FontWeight.bold),
-                        )),
+                          'Surgery',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 15,
+                              letterSpacing: 3),
+                        ),
+                      ),
+                    ),
                   ),
                 ),
                 Container(
@@ -87,18 +119,27 @@ class _DashScreenState extends State<DashScreen> {
                   margin: const EdgeInsets.all(8),
                   decoration: BoxDecoration(
                       image: const DecorationImage(
-                          image: NetworkImage(
-                              'https://media.istockphoto.com/vectors/eyelid-surgery-procedure-before-the-main-steps-excess-skin-and-fat-vector-id1047225272?k=6&m=1047225272&s=612x612&w=0&h=6pva49TOM9Q4XAKp3PER5kwzT5_OQp0umiwHZ9pDYv0=')),
+                          image: AssetImage('assets/eyesurgery.jpg')),
                       borderRadius: BorderRadius.circular(10),
                       color: Colors.white),
-                  child: const Padding(
-                    padding: EdgeInsets.all(8.0),
-                    child: Align(
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(8, 140, 8, 6),
+                    child: Container(
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.grey),
+                      child: const Align(
                         alignment: Alignment.bottomCenter,
                         child: Text(
                           'Quick Appointment',
-                          style: TextStyle(fontWeight: FontWeight.bold),
-                        )),
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 10,
+                              letterSpacing: 3),
+                        ),
+                      ),
+                    ),
                   ),
                 ),
                 Container(
@@ -107,18 +148,27 @@ class _DashScreenState extends State<DashScreen> {
                   margin: const EdgeInsets.all(8),
                   decoration: BoxDecoration(
                       image: const DecorationImage(
-                          image: NetworkImage(
-                              'https://th.bing.com/th/id/OIP.smZY2jt67-7Q4hJ0B8UlfQHaHa?pid=ImgDet&rs=1')),
+                          image: AssetImage('assets/youtube.jpg')),
                       borderRadius: BorderRadius.circular(10),
                       color: Colors.white),
-                  child: const Padding(
-                    padding: EdgeInsets.all(8.0),
-                    child: Align(
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(8, 140, 8, 6),
+                    child: Container(
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.grey),
+                      child: const Align(
                         alignment: Alignment.bottomCenter,
                         child: Text(
-                          'YouTube Feeds',
-                          style: TextStyle(fontWeight: FontWeight.bold),
-                        )),
+                          'Youtube Feeds',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 15,
+                              letterSpacing: 3),
+                        ),
+                      ),
+                    ),
                   ),
                 ),
                 Container(
@@ -127,18 +177,27 @@ class _DashScreenState extends State<DashScreen> {
                   margin: const EdgeInsets.all(8),
                   decoration: BoxDecoration(
                       image: const DecorationImage(
-                          image: NetworkImage(
-                              'https://png.pngtree.com/png-vector/20190504/ourlarge/pngtree-star-logo-graphic-design-template-vector-png-image_1020003.jpg')),
+                          image: AssetImage('assets/rating.jpg')),
                       borderRadius: BorderRadius.circular(10),
                       color: Colors.white),
-                  child: const Padding(
-                    padding: EdgeInsets.all(8.0),
-                    child: Align(
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(8, 140, 8, 6),
+                    child: Container(
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.grey),
+                      child: const Align(
                         alignment: Alignment.bottomCenter,
                         child: Text(
                           'Ratings',
-                          style: TextStyle(fontWeight: FontWeight.bold),
-                        )),
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 15,
+                              letterSpacing: 3),
+                        ),
+                      ),
+                    ),
                   ),
                 ),
                 Container(
@@ -151,14 +210,24 @@ class _DashScreenState extends State<DashScreen> {
                               'https://superawesomevectors.com/wp-content/uploads/2017/06/glasses-free-flat-vector-icon-800x566.jpg')),
                       borderRadius: BorderRadius.circular(10),
                       color: Colors.white),
-                  child: const Padding(
-                    padding: EdgeInsets.all(8.0),
-                    child: Align(
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(8, 140, 8, 6),
+                    child: Container(
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.grey),
+                      child: const Align(
                         alignment: Alignment.bottomCenter,
                         child: Text(
                           'Glasses',
-                          style: TextStyle(fontWeight: FontWeight.bold),
-                        )),
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 15,
+                              letterSpacing: 3),
+                        ),
+                      ),
+                    ),
                   ),
                 ),
                 Container(
@@ -167,18 +236,27 @@ class _DashScreenState extends State<DashScreen> {
                   margin: const EdgeInsets.all(8),
                   decoration: BoxDecoration(
                       image: const DecorationImage(
-                          image: NetworkImage(
-                              'https://static.vecteezy.com/system/resources/previews/000/637/367/original/vector-medicine-icon-symbol-sign.jpg')),
+                          image: AssetImage('assets/medicine.png')),
                       borderRadius: BorderRadius.circular(10),
                       color: Colors.white),
-                  child: const Padding(
-                    padding: EdgeInsets.all(8.0),
-                    child: Align(
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(8, 140, 8, 6),
+                    child: Container(
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.grey),
+                      child: const Align(
                         alignment: Alignment.bottomCenter,
                         child: Text(
                           'Medicine',
-                          style: TextStyle(fontWeight: FontWeight.bold),
-                        )),
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 15,
+                              letterSpacing: 3),
+                        ),
+                      ),
+                    ),
                   ),
                 ),
               ])),

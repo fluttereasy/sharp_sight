@@ -51,7 +51,7 @@ class _OtpScreenState extends State<OtpScreen> {
                       width: double.infinity,
                       child: Image(
                           width: 100,
-                          image: AssetImage('assets/sharpsightlogo.jpg'))),
+                          image: AssetImage('assets/easylogo.png'))),
                   const SizedBox(
                     height: 10,
                   ),
@@ -115,15 +115,30 @@ class _OtpScreenState extends State<OtpScreen> {
                                 elevation: 20,
                                 child: ElevatedButton(
                                     onPressed: () {
-                                      if(state is AuthLoadingState){
+                                      if (state is AuthLoadingState) {
                                         const Center(
                                           child: CircularProgressIndicator(),
                                         );
                                       }
-                                      String phoneNumber =
-                                          "+91${_mobileNumberController.text}";
-                                      BlocProvider.of<AuthCubit>(context)
-                                          .sendOtp(phoneNumber);
+                                      if (_mobileNumberController.text.length ==
+                                          10) {
+                                        String phoneNumber =
+                                            "+91${_mobileNumberController.text}";
+                                        BlocProvider.of<AuthCubit>(context)
+                                            .sendOtp(phoneNumber);
+                                      } else {
+                                        ScaffoldMessenger.of(context)
+                                            .showSnackBar(const SnackBar(
+                                          backgroundColor: Colors.red,
+                                          content: Text(
+                                              'Please enter correct Mobile Number'),
+                                          duration: Duration(seconds: 4),
+                                        ));
+                                      }
+                                      // String phoneNumber =
+                                      //     "+91${_mobileNumberController.text}";
+                                      // BlocProvider.of<AuthCubit>(context)
+                                      //     .sendOtp(phoneNumber);
                                     },
                                     child: const Text(
                                       'Get OTP',
@@ -138,7 +153,10 @@ class _OtpScreenState extends State<OtpScreen> {
                       ),
                       TextButton(
                           onPressed: () {
-                           Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginScreen()));
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => LoginScreen()));
                           },
                           child: const Text(
                             'Already have an account? Login here',
