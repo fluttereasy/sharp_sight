@@ -65,7 +65,12 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: Row(
                     children: [
                       GestureDetector(
-                        onTap: (){Navigator.push(context, CupertinoPageRoute(builder: (context)=>const CataractInfo()));},
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              CupertinoPageRoute(
+                                  builder: (context) => const CataractInfo()));
+                        },
                         child: Container(
                           margin: const EdgeInsets.all(8),
                           height: 100,
@@ -112,7 +117,8 @@ class _HomeScreenState extends State<HomeScreen> {
                               child: const Center(
                                   child: Text(
                                 'Lasik',
-                                style: TextStyle(letterSpacing: 2,fontSize: 16),
+                                style:
+                                    TextStyle(letterSpacing: 2, fontSize: 16),
                               )),
                             ),
                           ),

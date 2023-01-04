@@ -19,6 +19,7 @@ class AuthCubit extends Cubit<AuthState> {
     emit(AuthLoadingState());
     _auth.verifyPhoneNumber(
       phoneNumber: phoneNumber,
+      timeout: const Duration(seconds: 30),
       verificationCompleted: (phoneAuthCredential) {
         signInWithPhone(phoneAuthCredential);
       },

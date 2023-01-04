@@ -2,13 +2,14 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pinput/pinput.dart';
-import 'package:sharp_sight/Homescreen/home_screen.dart';
 import 'package:sharp_sight/Screens/navigation_bar_screen.dart';
 import 'package:sharp_sight/cubit/auth_cubit/auth_cubit.dart';
 import 'package:sharp_sight/cubit/auth_cubit/auth_states.dart';
 
 class OtpVerifyScreen extends StatefulWidget {
-  const OtpVerifyScreen({Key? key}) : super(key: key);
+  final phoneNumber;
+  const OtpVerifyScreen({Key? key, required this.phoneNumber})
+      : super(key: key);
 
   @override
   State<OtpVerifyScreen> createState() => _OtpVerifyScreenState();
@@ -16,17 +17,23 @@ class OtpVerifyScreen extends StatefulWidget {
 
 class _OtpVerifyScreenState extends State<OtpVerifyScreen> {
   @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     TextEditingController? otpController = TextEditingController();
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          leading: IconButton(
-            icon: const Icon(Icons.arrow_back),
-            onPressed: () {
-              Navigator.popUntil(context, (route) => route.isFirst);
-            },
-          ),
+          automaticallyImplyLeading: false,
+          // leading: IconButton(
+          //   icon: const Icon(Icons.arrow_back),
+          //   onPressed: () {
+          //     Navigator.popUntil(context, (route) => route.isFirst);
+          //   },
+          // ),
           elevation: 0,
           backgroundColor: const Color(0xff7850a8),
         ),
@@ -45,11 +52,11 @@ class _OtpVerifyScreenState extends State<OtpVerifyScreen> {
                     fontSize: 22),
               ),
             ),
-            const Padding(
-              padding: EdgeInsets.fromLTRB(20, 5, 0, 5),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(20, 5, 0, 5),
               child: Text(
-                'we have sent the verification code to',
-                style: TextStyle(
+                'we have sent the verification code to ${widget.phoneNumber}',
+                style: const TextStyle(
                     color: Colors.grey,
                     fontWeight: FontWeight.bold,
                     fontSize: 12),
@@ -65,14 +72,22 @@ class _OtpVerifyScreenState extends State<OtpVerifyScreen> {
                 length: 6,
               ),
             ),
-            SizedBox(
-              width: double.infinity,
-              child: TextButton(
-                  onPressed: () {},
-                  child: const Text(
-                    'Resend OTP',
-                    style: TextStyle(color: Colors.black),
-                  )),
+            BlocConsumer<AuthCubit, AuthState>(
+              listener: (context, state) {},
+              builder: (context, state) {
+                return SizedBox(
+                  width: double.infinity,
+                  child: TextButton(
+                      onPressed: () {
+                        BlocProvider.of<AuthCubit>(context)
+                            .sendOtp("+91${widget.phoneNumber}");
+                      },
+                      child: const Text(
+                        'Resend OTP',
+                        style: TextStyle(color: Colors.black),
+                      )),
+                );
+              },
             ),
             BlocConsumer<AuthCubit, AuthState>(
               listener: (context, state) {
@@ -85,7 +100,7 @@ class _OtpVerifyScreenState extends State<OtpVerifyScreen> {
                   ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                     backgroundColor: Colors.red,
                     content: Text(state.error.toString()),
-                    duration: const Duration(seconds: 4),
+                    duration: const Duration(seconds: 3),
                   ));
                 }
               },

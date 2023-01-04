@@ -1,8 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sharp_sight/Screens/dash_screen.dart';
+import 'package:sharp_sight/Screens/otp_screen.dart';
 import 'package:sharp_sight/Screens/profile_screen.dart';
+import 'package:sharp_sight/cubit/auth_cubit/auth_cubit.dart';
+import 'package:sharp_sight/cubit/auth_cubit/auth_states.dart';
 import '../Homescreen/home_screen.dart';
 
 class NavigationBarScreen extends StatefulWidget {
@@ -26,16 +29,24 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
       return Scaffold(
         body: Center(
           child: AlertDialog(
-            content: const Text('Are you sure you want to exit?'),
+            content: const Text('Do you want to Logout ?'),
             actions: [
-              TextButton(
-                onPressed: () {
-                  SystemNavigator.pop();
+              BlocConsumer<AuthCubit , AuthState>(
+                listener: (context, state) {
+                  // TODO: implement listener
                 },
-                child: const Text(
-                  'YES',
-                  style: TextStyle(color: Colors.black),
-                ),
+                builder: (context, state) {
+                  return TextButton(
+                    onPressed: () async {
+                      BlocProvider.of<AuthCubit>(context).logOut();
+                      Navigator.push(context, CupertinoPageRoute(builder: (context)=>const OtpScreen()));
+                    },
+                    child: const Text(
+                      'YES',
+                      style: TextStyle(color: Colors.black),
+                    ),
+                  );
+                },
               ),
               TextButton(
                 onPressed: () {

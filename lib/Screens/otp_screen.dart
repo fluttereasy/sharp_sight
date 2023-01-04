@@ -9,7 +9,6 @@ import 'package:sharp_sight/cubit/auth_cubit/auth_states.dart';
 
 class OtpScreen extends StatefulWidget {
   const OtpScreen({Key? key}) : super(key: key);
-
   @override
   State<OtpScreen> createState() => _OtpScreenState();
 }
@@ -96,7 +95,7 @@ class _OtpScreenState extends State<OtpScreen> {
                                 context,
                                 CupertinoPageRoute(
                                     builder: (context) =>
-                                        const OtpVerifyScreen()));
+                                         OtpVerifyScreen(phoneNumber: _mobileNumberController.text,)));
                           }
                         },
                         builder: (context, state) {

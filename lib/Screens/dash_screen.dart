@@ -14,7 +14,7 @@ class _DashScreenState extends State<DashScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-          backgroundColor: Color(0xffAE98D7),
+          backgroundColor: const Color(0xffAE98D7),
           body: GridView(
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
@@ -25,7 +25,10 @@ class _DashScreenState extends State<DashScreen> {
               children: [
                 InkWell(
                   onTap: () {
-                    Navigator.push(context, CupertinoPageRoute(builder: (context)=>const AppointmentBar()));
+                    Navigator.push(
+                        context,
+                        CupertinoPageRoute(
+                            builder: (context) => const ApointmentBar()));
                   },
                   child: Container(
                     height: 100,
